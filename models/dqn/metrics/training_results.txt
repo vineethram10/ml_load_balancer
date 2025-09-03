@@ -1,0 +1,131 @@
+
+============================================================
+STARTING DQN AGENT TRAINING
+============================================================
+
+📊 Loading training data...
+data/alibaba_subset/
+F:\NCI_2025\Vineeth\load-balancer-ml\data\alibaba_subset
+F:\NCI_2025\Vineeth\load-balancer-ml\data\alibaba_subset\processed_data.csv
+✅ Loaded Alibaba dataset: (40320, 9)
+Data columns: ['machine_id', 'timestamp', 'cpu_util_percent', 'mem_util_percent', 'disk_io_percent', 'net_in', 'net_out', 'col_7', 'col_8']
+
+🌍 Initializing environment...
+
+🤖 Initializing DQN agent...
+   State size: 10
+   Action size: 3
+   Cooldown config: {'scale_up_cooldown': 60, 'scale_down_cooldown': 300}
+2025-08-08 11:01:34.571961: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+🚀 Starting training for 50 episodes...
+------------------------------------------------------------
+Episode 0/50
+  Reward: -202.36 (Avg last 10: -202.36)
+  Steps: 288, Time: 49.34s
+  Epsilon: 0.980
+  CPU Util: 0.0%
+  Oscillation Rate: 0.233
+  Total Training Time: 49.3s
+------------------------------------------------------------
+Episode 5/50
+  Reward: -192.14 (Avg last 10: -192.14)
+  Steps: 288, Time: 59.06s
+  Epsilon: 0.886
+  CPU Util: 0.0%
+  Oscillation Rate: 0.202
+  Total Training Time: 311.6s
+------------------------------------------------------------
+Episode 10/50
+  Reward: -202.64 (Avg last 10: -200.89)
+  Steps: 288, Time: 54.00s
+  Epsilon: 0.801
+  CPU Util: 0.0%
+  Oscillation Rate: 0.164
+  Total Training Time: 587.5s
+------------------------------------------------------------
+Episode 15/50
+  Reward: -198.32 (Avg last 10: -201.10)
+  Steps: 288, Time: 55.20s
+  Epsilon: 0.724
+  CPU Util: 0.0%
+  Oscillation Rate: 0.115
+  Total Training Time: 871.1s
+------------------------------------------------------------
+Episode 20/50
+  Reward: -188.59 (Avg last 10: -196.42)
+  Steps: 288, Time: 50.90s
+  Epsilon: 0.654
+  CPU Util: 0.0%
+  Oscillation Rate: 0.105
+  Total Training Time: 1156.8s
+------------------------------------------------------------
+Episode 25/50
+  Reward: -184.25 (Avg last 10: -188.58)
+  Steps: 288, Time: 52.31s
+  Epsilon: 0.591
+  CPU Util: 0.0%
+  Oscillation Rate: 0.070
+  Total Training Time: 1418.0s
+------------------------------------------------------------
+Episode 30/50
+  Reward: -197.55 (Avg last 10: -188.29)
+  Steps: 288, Time: 64.23s
+  Epsilon: 0.535
+  CPU Util: 0.0%
+  Oscillation Rate: 0.077
+  Total Training Time: 1716.3s
+------------------------------------------------------------
+Episode 35/50
+  Reward: -181.47 (Avg last 10: -186.26)
+  Steps: 288, Time: 68.02s
+  Epsilon: 0.483
+  CPU Util: 0.0%
+  Oscillation Rate: 0.038
+  Total Training Time: 2053.6s
+------------------------------------------------------------
+Episode 40/50
+  Reward: -199.29 (Avg last 10: -182.60)
+  Steps: 288, Time: 62.32s
+  Epsilon: 0.437
+  CPU Util: 0.0%
+  Oscillation Rate: 0.038
+  Total Training Time: 2360.5s
+------------------------------------------------------------
+Episode 45/50
+  Reward: -197.87 (Avg last 10: -183.23)
+  Steps: 288, Time: 61.30s
+  Epsilon: 0.395
+  CPU Util: 0.0%
+  Oscillation Rate: 0.052
+  Total Training Time: 2671.5s
+------------------------------------------------------------
+
+============================================================
+✅ TRAINING COMPLETED IN 2929.4 SECONDS
+============================================================
+
+💾 Saving model and configuration...
+✅ Model saved to models/dqn/weights/
+
+📊 Generating comprehensive visualizations...
+
+✅ Metrics saved to models/dqn/metrics/training_metrics.json
+
+============================================================
+TRAINING SUMMARY
+============================================================
+✅ Total Episodes: 50
+✅ Training Duration: 2929.4 seconds
+✅ Final Reward: -176.49
+✅ Best Reward: -171.41
+✅ Average Reward (last 10): -183.37
+✅ Final Epsilon: 0.364
+✅ Final CPU Utilization: 0.0%
+✅ Final Oscillation Rate: 0.045
+✅ Plots saved to: models/dqn/plots/
+✅ Metrics saved to: models/dqn/metrics/
+============================================================
+
+🎉 Training complete! Check the plots and metrics folders for detailed analysis.

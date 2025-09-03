@@ -1,0 +1,7 @@
+755097618049
+
+docker build -t ml-load-balancer-lambda .
+aws ecr create-repository --repository-name ml-load-balancer-lambda
+# Authenticate, tag and push
+docker tag ml-load-balancer-lambda:latest 755097618049.dkr.ecr.us-east-1.amazonaws.com/ml-load-balancer-lambda:latest
+docker push 755097618049.dkr.ecr.<us-east-1>.amazonaws.com/ml-load-balancer-lambda:latest

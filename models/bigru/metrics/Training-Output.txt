@@ -1,0 +1,216 @@
+(lb_env) F:\NCI_2025\Vineeth\load-balancer-ml>python models\bigru\train.py
+
+==================================================
+STARTING BIGRU TRAINING
+==================================================
+
+📊 Loading data...
+Data shape: (40320, 3)
+Data statistics:
+                CPU        Memory       Network
+count  40320.000000  40320.000000  40320.000000
+mean      14.702753     47.152877     17.065391
+std       18.780455     41.807321     17.742909
+min        0.000000      1.000000      0.000000
+25%        0.000000      3.000000      0.000000
+50%        3.000000     53.000000     10.310000
+75%       30.000000     88.000000     35.280000
+max       93.000000     98.000000     45.230000
+
+🔄 Preparing sequences...
+X shape: (40285, 24, 3), y shape: (40285, 12)
+
+✂️ Splitting data...
+Training samples: 32228, Test samples: 8057
+
+🧠 Creating BiGRU model...
+2025-08-08 10:18:25.764317: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+🚀 Training model...
+Epoch 1/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0050 - mae: 0.0353
+Epoch 1: val_loss improved from inf to 0.00507, saving model to models/bigru/weights\best_model.h5
+F:\NCI_2025\Vineeth\load-balancer-ml\lb_env\lib\site-packages\keras\src\engine\training.py:3000: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
+  saving_api.save_model(
+806/806 [==============================] - 24s 21ms/step - loss: 0.0050 - mae: 0.0353 - val_loss: 0.0051 - val_mae: 0.0317 - lr: 0.0010
+Epoch 2/50
+803/806 [============================>.] - ETA: 0s - loss: 0.0036 - mae: 0.0292
+Epoch 2: val_loss did not improve from 0.00507
+806/806 [==============================] - 15s 18ms/step - loss: 0.0036 - mae: 0.0292 - val_loss: 0.0052 - val_mae: 0.0348 - lr: 0.0010
+Epoch 3/50
+803/806 [============================>.] - ETA: 0s - loss: 0.0034 - mae: 0.0285
+Epoch 3: val_loss improved from 0.00507 to 0.00505, saving model to models/bigru/weights\best_model.h5
+806/806 [==============================] - 13s 17ms/step - loss: 0.0034 - mae: 0.0285 - val_loss: 0.0051 - val_mae: 0.0330 - lr: 0.0010
+Epoch 4/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0034 - mae: 0.0287
+Epoch 4: val_loss did not improve from 0.00505
+806/806 [==============================] - 16s 20ms/step - loss: 0.0034 - mae: 0.0287 - val_loss: 0.0054 - val_mae: 0.0361 - lr: 0.0010
+Epoch 5/50
+805/806 [============================>.] - ETA: 0s - loss: 0.0034 - mae: 0.0286
+Epoch 5: val_loss did not improve from 0.00505
+806/806 [==============================] - 14s 17ms/step - loss: 0.0034 - mae: 0.0286 - val_loss: 0.0051 - val_mae: 0.0368 - lr: 0.0010
+Epoch 6/50
+806/806 [==============================] - ETA: 0s - loss: 0.0033 - mae: 0.0275
+Epoch 6: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.
+
+Epoch 6: val_loss did not improve from 0.00505
+806/806 [==============================] - 15s 19ms/step - loss: 0.0033 - mae: 0.0275 - val_loss: 0.0053 - val_mae: 0.0356 - lr: 0.0010
+Epoch 7/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0033 - mae: 0.0262
+Epoch 7: val_loss improved from 0.00505 to 0.00499, saving model to models/bigru/weights\best_model.h5
+806/806 [==============================] - 15s 19ms/step - loss: 0.0033 - mae: 0.0262 - val_loss: 0.0050 - val_mae: 0.0319 - lr: 5.0000e-04
+Epoch 8/50
+806/806 [==============================] - ETA: 0s - loss: 0.0032 - mae: 0.0259
+Epoch 8: val_loss improved from 0.00499 to 0.00499, saving model to models/bigru/weights\best_model.h5
+806/806 [==============================] - 17s 21ms/step - loss: 0.0032 - mae: 0.0259 - val_loss: 0.0050 - val_mae: 0.0320 - lr: 5.0000e-04
+Epoch 9/50
+806/806 [==============================] - ETA: 0s - loss: 0.0032 - mae: 0.0259
+Epoch 9: val_loss did not improve from 0.00499
+806/806 [==============================] - 14s 17ms/step - loss: 0.0032 - mae: 0.0259 - val_loss: 0.0050 - val_mae: 0.0320 - lr: 5.0000e-04
+Epoch 10/50
+806/806 [==============================] - ETA: 0s - loss: 0.0032 - mae: 0.0255
+Epoch 10: val_loss did not improve from 0.00499
+806/806 [==============================] - 13s 16ms/step - loss: 0.0032 - mae: 0.0255 - val_loss: 0.0050 - val_mae: 0.0334 - lr: 5.0000e-04
+Epoch 11/50
+806/806 [==============================] - ETA: 0s - loss: 0.0032 - mae: 0.0255
+Epoch 11: ReduceLROnPlateau reducing learning rate to 0.0002500000118743628.
+
+Epoch 11: val_loss did not improve from 0.00499
+806/806 [==============================] - 13s 16ms/step - loss: 0.0032 - mae: 0.0255 - val_loss: 0.0050 - val_mae: 0.0313 - lr: 5.0000e-04
+Epoch 12/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0032 - mae: 0.0250
+Epoch 12: val_loss did not improve from 0.00499
+806/806 [==============================] - 13s 17ms/step - loss: 0.0032 - mae: 0.0250 - val_loss: 0.0051 - val_mae: 0.0334 - lr: 2.5000e-04
+Epoch 13/50
+805/806 [============================>.] - ETA: 0s - loss: 0.0032 - mae: 0.0250
+Epoch 13: val_loss improved from 0.00499 to 0.00498, saving model to models/bigru/weights\best_model.h5
+806/806 [==============================] - 14s 17ms/step - loss: 0.0032 - mae: 0.0250 - val_loss: 0.0050 - val_mae: 0.0324 - lr: 2.5000e-04
+Epoch 14/50
+806/806 [==============================] - ETA: 0s - loss: 0.0032 - mae: 0.0250
+Epoch 14: val_loss improved from 0.00498 to 0.00496, saving model to models/bigru/weights\best_model.h5
+806/806 [==============================] - 14s 17ms/step - loss: 0.0032 - mae: 0.0250 - val_loss: 0.0050 - val_mae: 0.0312 - lr: 2.5000e-04
+Epoch 15/50
+803/806 [============================>.] - ETA: 0s - loss: 0.0032 - mae: 0.0250
+Epoch 15: val_loss did not improve from 0.00496
+806/806 [==============================] - 14s 17ms/step - loss: 0.0032 - mae: 0.0250 - val_loss: 0.0050 - val_mae: 0.0322 - lr: 2.5000e-04
+Epoch 16/50
+806/806 [==============================] - ETA: 0s - loss: 0.0032 - mae: 0.0249
+Epoch 16: val_loss improved from 0.00496 to 0.00493, saving model to models/bigru/weights\best_model.h5
+806/806 [==============================] - 14s 17ms/step - loss: 0.0032 - mae: 0.0249 - val_loss: 0.0049 - val_mae: 0.0331 - lr: 2.5000e-04
+Epoch 17/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0032 - mae: 0.0249
+Epoch 17: val_loss did not improve from 0.00493
+806/806 [==============================] - 17s 21ms/step - loss: 0.0032 - mae: 0.0248 - val_loss: 0.0051 - val_mae: 0.0337 - lr: 2.5000e-04
+Epoch 18/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0031 - mae: 0.0249
+Epoch 18: val_loss improved from 0.00493 to 0.00492, saving model to models/bigru/weights\best_model.h5
+806/806 [==============================] - 15s 19ms/step - loss: 0.0032 - mae: 0.0249 - val_loss: 0.0049 - val_mae: 0.0319 - lr: 2.5000e-04
+Epoch 19/50
+806/806 [==============================] - ETA: 0s - loss: 0.0031 - mae: 0.0247
+Epoch 19: ReduceLROnPlateau reducing learning rate to 0.0001250000059371814.
+
+Epoch 19: val_loss did not improve from 0.00492
+806/806 [==============================] - 16s 20ms/step - loss: 0.0031 - mae: 0.0247 - val_loss: 0.0049 - val_mae: 0.0313 - lr: 2.5000e-04
+Epoch 20/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0031 - mae: 0.0246
+Epoch 20: val_loss did not improve from 0.00492
+806/806 [==============================] - 17s 21ms/step - loss: 0.0031 - mae: 0.0246 - val_loss: 0.0050 - val_mae: 0.0320 - lr: 1.2500e-04
+Epoch 21/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0031 - mae: 0.0246
+Epoch 21: val_loss did not improve from 0.00492
+806/806 [==============================] - 16s 20ms/step - loss: 0.0031 - mae: 0.0246 - val_loss: 0.0050 - val_mae: 0.0326 - lr: 1.2500e-04
+Epoch 22/50
+805/806 [============================>.] - ETA: 0s - loss: 0.0031 - mae: 0.0245
+Epoch 22: val_loss did not improve from 0.00492
+806/806 [==============================] - 18s 22ms/step - loss: 0.0031 - mae: 0.0245 - val_loss: 0.0049 - val_mae: 0.0317 - lr: 1.2500e-04
+Epoch 23/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0031 - mae: 0.0245
+Epoch 23: val_loss did not improve from 0.00492
+806/806 [==============================] - 15s 19ms/step - loss: 0.0031 - mae: 0.0245 - val_loss: 0.0050 - val_mae: 0.0321 - lr: 1.2500e-04
+Epoch 24/50
+805/806 [============================>.] - ETA: 0s - loss: 0.0031 - mae: 0.0245
+Epoch 24: ReduceLROnPlateau reducing learning rate to 6.25000029685907e-05.
+
+Epoch 24: val_loss did not improve from 0.00492
+806/806 [==============================] - 15s 19ms/step - loss: 0.0031 - mae: 0.0245 - val_loss: 0.0050 - val_mae: 0.0318 - lr: 1.2500e-04
+Epoch 25/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0031 - mae: 0.0244
+Epoch 25: val_loss did not improve from 0.00492
+806/806 [==============================] - 16s 19ms/step - loss: 0.0031 - mae: 0.0244 - val_loss: 0.0050 - val_mae: 0.0316 - lr: 6.2500e-05
+Epoch 26/50
+806/806 [==============================] - ETA: 0s - loss: 0.0031 - mae: 0.0244
+Epoch 26: val_loss did not improve from 0.00492
+806/806 [==============================] - 15s 18ms/step - loss: 0.0031 - mae: 0.0244 - val_loss: 0.0050 - val_mae: 0.0315 - lr: 6.2500e-05
+Epoch 27/50
+804/806 [============================>.] - ETA: 0s - loss: 0.0031 - mae: 0.0244
+Epoch 27: val_loss did not improve from 0.00492
+806/806 [==============================] - 16s 20ms/step - loss: 0.0031 - mae: 0.0244 - val_loss: 0.0050 - val_mae: 0.0319 - lr: 6.2500e-05
+Epoch 28/50
+806/806 [==============================] - ETA: 0s - loss: 0.0031 - mae: 0.0244Restoring model weights from the end of the best epoch: 18.
+
+Epoch 28: val_loss did not improve from 0.00492
+806/806 [==============================] - 16s 20ms/step - loss: 0.0031 - mae: 0.0244 - val_loss: 0.0050 - val_mae: 0.0316 - lr: 6.2500e-05
+Epoch 28: early stopping
+
+⏱️ Training completed in 431.84 seconds
+
+📈 Evaluating on test set...
+Test Loss: [0.010269561782479286, 0.0668141171336174]
+
+🔮 Generating predictions...
+
+📊 Calculating metrics...
+
+==================================================
+TEST SET PERFORMANCE METRICS
+==================================================
+MAE                 : 0.0668
+MSE                 : 0.0103
+RMSE                : 0.1013
+R2                  : 0.7611
+MAPE                : 29.4455
+DIRECTIONAL_ACCURACY: 59.9288
+
+💾 Saving model...
+F:\NCI_2025\Vineeth\load-balancer-ml\lb_env\lib\site-packages\keras\src\engine\training.py:3000: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
+  saving_api.save_model(
+2025-08-08 10:26:22.793950: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+2025-08-08 10:26:22.794155: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2025-08-08 10:26:22.835817: I tensorflow/cc/saved_model/reader.cc:45] Reading SavedModel from: C:\Users\ROBERT~1\AppData\Local\Temp\tmpqc0fqfw8
+2025-08-08 10:26:22.901377: I tensorflow/cc/saved_model/reader.cc:91] Reading meta graph with tags { serve }
+2025-08-08 10:26:22.901632: I tensorflow/cc/saved_model/reader.cc:132] Reading SavedModel debug info (if present) from: C:\Users\ROBERT~1\AppData\Local\Temp\tmpqc0fqfw8
+2025-08-08 10:26:23.142482: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+2025-08-08 10:26:23.185804: I tensorflow/cc/saved_model/loader.cc:231] Restoring SavedModel bundle.
+2025-08-08 10:26:23.645626: I tensorflow/cc/saved_model/loader.cc:215] Running initialization op on SavedModel bundle at path: C:\Users\ROBERT~1\AppData\Local\Temp\tmpqc0fqfw8
+2025-08-08 10:26:23.965289: I tensorflow/cc/saved_model/loader.cc:314] SavedModel load for tags { serve }; Status: success: OK. Took 1129482 microseconds.
+2025-08-08 10:26:24.773934: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:255] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-08 10:26:26.215801: W tensorflow/compiler/mlir/lite/flatbuffer_export.cc:2073] TFLite interpreter needs to link Flex delegate in order to run the model since it contains the following Select TFop(s):
+Flex ops: FlexTensorListReserve, FlexTensorListSetItem, FlexTensorListStack
+Details:
+        tf.TensorListReserve(tensor<2xi32>, tensor<i32>) -> (tensor<!tf_type.variant<tensor<?x32xf32>>>) : {device = ""}
+        tf.TensorListSetItem(tensor<!tf_type.variant<tensor<?x32xf32>>>, tensor<i32>, tensor<?x32xf32>) -> (tensor<!tf_type.variant<tensor<?x32xf32>>>) : {device = "", resize_if_index_out_of_bounds = false}
+        tf.TensorListStack(tensor<!tf_type.variant<tensor<?x32xf32>>>, tensor<2xi32>) -> (tensor<1x?x32xf32>) : {device = "", num_elements = 1 : i64}
+        tf.TensorListStack(tensor<!tf_type.variant<tensor<?x32xf32>>>, tensor<2xi32>) -> (tensor<?x?x32xf32>) : {device = "", num_elements = -1 : i64}
+See instructions: https://www.tensorflow.org/lite/guide/ops_select
+Successfully quantized model. Size: 0.06 MB
+✅ Quantized model size: 0.06 MB
+✅ Scaler saved
+
+📊 Generating visualizations...
+
+==================================================
+METRICS SAVED TO: models/bigru/metrics/training_metrics.json
+==================================================
+
+==================================================
+TRAINING SUMMARY
+==================================================
+✅ Model trained successfully
+✅ Training duration: 431.84 seconds
+✅ Model size: 0.06 MB
+✅ Test RMSE: 0.1013
+✅ Test R²: 0.7611
+✅ Plots saved to: models/bigru/plots/
+✅ Metrics saved to: models/bigru/metrics/
+==================================================

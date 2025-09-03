@@ -1,0 +1,11 @@
+{
+  "state_size": 10,
+  "action_size": 3,
+  "cooldown_config": {
+    "scale_up_cooldown": 60,
+    "scale_down_cooldown": 300
+  },
+  "epsilon": 0.3641696800871167,
+  "training_episodes": 50,
+  "total_training_time": 2929.3761179447174
+}
